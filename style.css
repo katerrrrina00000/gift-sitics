@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial;
+  overflow: hidden;
+}
+
+/* экраны */
+.screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.screen.active {
+  opacity: 1;
+}
+
+/* фото */
+img {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+/* две фотки */
+.photos {
+  display: flex;
+  gap: 10px;
+}
+
+.photos img {
+  width: 45%;
+}
+
+/* кнопки */
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* скрыто */
+.hidden {
+  display: none;
+}
+
+/* слова */
+.words {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.words span {
+  position: absolute;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* сердечки */
+.heart {
+  position: fixed;
+  top: 100%;
+  animation: float 4s linear forwards;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-120vh);
+  }
+}
+
+/* видео */
+video {
+  width: 90%;
+  border-radius: 10px;
+}

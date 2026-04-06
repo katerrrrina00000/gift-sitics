@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мы как два тюленя 🦭</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="nextScreen(1); startMusic();">
+
+<!-- Экран 1 -->
+<div class="screen active" id="screen1">
+  <h2 class="type">мы с тобой как два тюленя 🦭</h2>
+  <img src="https://i.ibb.co/5XPjfY7z/seal.jpg" class="seal" onclick="showVideo()">
+  <div id="videoBox" class="hidden">
+    <video controls>
+      <source src="https://files.catbox.moe/ss40lv.mov" type="video/mp4">
+    </video>
+  </div>
+  <button onclick="nextScreen(4)">Дальше →</button>
+</div>
+
+<!-- Экран 4 -->
+<div class="screen" id="screen4">
+  <div class="photos">
+    <img src="https://i.ibb.co/15n5jN3/photo1.jpg" id="photo1">
+    <img src="https://i.ibb.co/9kxrnwj9/photo2.jpg" id="photo2">
+  </div>
+  <button onclick="mergePhotos()">Объединить ❤️</button>
+
+  <div id="merged" class="hidden">
+    <img src="https://i.ibb.co/mF4PYLHT/merged.jpg">
+    <p class="type">мы с тобой реально две половинки 💞</p>
+  </div>
+
+  <button onclick="nextScreen(5)">Дальше →</button>
+</div>
+
+<!-- Экран 5 -->
+<div class="screen" id="screen5">
+  <h2>Угадай какое слово подходит тебе?</h2>
+
+  <div class="words">
+    <span onclick="wrong()">крутой</span>
+    <span onclick="wrong()">смешной</span>
+    <span onclick="wrong()">умный</span>
+    <span onclick="wrong()">добрый</span>
+    <span onclick="correct()">тюлень 🦭</span>
+  </div>
+
+  <p id="hint"></p>
+
+  <div id="finalLove" class="hidden">
+    <img src="https://i.ibb.co/MyYsndVJ/final.jpg">
+  </div>
+</div>
+
+<!-- Экран 6 -->
+<div class="screen" id="screen6">
+  <h1 class="type">Я тебя люблю 💖</h1>
+</div>
+
+<audio id="music" loop>
+  <source src="https://files.catbox.moe/67t49t.mpeg" type="audio/mp3">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
